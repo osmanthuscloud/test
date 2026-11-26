@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random OC Generator</title>
+    <meta name="author" content="NomnomNami">
+    <meta name="description" content="make up a random oc! customize the parts to create the perfect character prompt. use this if you want something fun to draw!">
+    <link href="/art/style2026.css" rel="stylesheet" type="text/css" media="all">
+      
+      <style>
+          #story {padding: 0 20px; border: 2px dashed #D0D0DB; margin: 1em auto;}
+          #story ul {padding-left:20px;}
+          #story li {padding-block: 4px;}
+          button {
+              all:unset;
+              font-weight: bold;
+              cursor: pointer;
+          }
+          button:focus {
+              outline: 2px solid #fff;
+              outline-offset: -4px;
+          }
+          .main-button {
+              background: #D0D0DB;
+              padding: .5em 16px;
+              border: 2px solid #4D4B57;
+              border-radius: 8px;
+              user-select: none;
+          }
+          .main-button:hover {
+              background: #e4e4ed;
+              border: 2px solid #878592;
+          }
+          
+          #desc button,
+          #person button,
+          #eyes button,
+          #hair button,
+          #food button,
+          #thing button {
+              background: #e4e4ed;
+              padding-inline: 4px;
+              margin-block: 4px;
+          }
+          
+          #desc button:hover,
+          #person button:hover,
+          #eyes button:hover,
+          #hair button:hover,
+          #food button:hover,
+          #thing button:hover {
+              background: #fff09c;
+          }
+          
+          #desc button {background: #FF9EAB80;}
+          #person button {background: #ffbc9380;}
+          #hair button {background: #b2ffac80;}
+          #eyes button {background: #9EE6FF80;}
+          #food button {background: #bdb7ff80;}
+          #thing button {background: #ffbef080;}
+
+      </style>
+  </head>
+  <body>
+       <nav>
+       <ul>
+            <li style="background: white;"><a href="random-oc.html">OCs</a></li>
+           <li style="background: #ffd8eb;"><a href="random-pairing.html">Pairings</a></li>
+             <!--<li style="background: #b9efff;"><a href="random-pairing.html">Pairings</a></li>-->
+             <!--<li style="background-color:#ffd1d9"><a href=""></a></li>-->
+       </ul>
+       </nav>
+      
+    <main>
+                
+        <h1>Random OC Generator</h1>
+        <p>i wanted an excuse to practice javascript, so i made this. you can click the individual parts to craft the perfect character concept. it'd be nice if you try drawing them, too 😊 have fun!</p>
+        
+        <button class="main-button" onclick="generateStory()">randomize!</button>
+        <div id="story">
+            <p><span id="desc"></span> <span id="person"></span><span id="hair"></span><span id="eyes"></span></p>
+            <ul>
+            <li id="food"></li>
+            <li id="thing"></li>
+            </ul>
+        </div>
+        
+        <script type="text/javascript" src="random-oc.js"></script><noscript>this page requires javascript</noscript>
+        
+        <hr style="border:none; margin-block:24px;">
+        <h2>links</h2>
+        <ul>
+        <li><a href="/blog/posts/2026/02-27-making-random-generators-in-javascript.html">learn how to make one of these for your site</a></li>
+            <li><a href="/characters/">Character Gallery</a></li>
+            <li><a href="/contact.html">contact</a></li>
+        </ul>
+        </main>
+      
+  <footer id="footer"><a href="/index.html">nomnomnami.com</a> |  hosted on <a target="_blank" href="https://neocities.org/site/nomnomnami">neocities</a>  |
+      <a href="/sitemap.html">site map</a>  
+      </footer>  
+  </body>
+</html>
