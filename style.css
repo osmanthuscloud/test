@@ -57,7 +57,7 @@ nav ul {
 }
 nav li {
   padding: 4px 20px;
-  list-style-type: "";
+  list-style-type: "circle";
   background: #eee;
   border-radius: 8px 8px 0 0;
 }
