@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,8 +56,6 @@
           #person button {background: #ffbc9380;}
           #hair button {background: #b2ffac80;}
           #eyes button {background: #9EE6FF80;}
-          #food button {background: #bdb7ff80;}
-          #thing button {background: #ffbef080;}
 
       </style>
   </head>
@@ -64,12 +63,18 @@
       
     <main>
                 
-        <h1>Drabble Prompt Generator</h1>
+        <h1>on this holiday of cheer...</h1>
         <p>testing one two three</p>
         
-        <button class="main-button" onclick="generateStory()">randomize!</button>
+        <button class="main-button" onclick="generateStory()">today's devil's drabble</button>
         <div id="story">
-            <p><span id="desc"></span> <span id="person"></span><span id="hair"></span><span id="eyes"></span></p>
+            <p>
+              <ul>
+                <li>genre:<span id="setting"></span></li>
+                <li>au:<span id="trope"></span></li>
+              
+              </ul>
+            </p>
     
         </div>
         
