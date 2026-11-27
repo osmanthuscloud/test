@@ -98,7 +98,7 @@ main h3 {
   margin-block-end: 0.2em;
 }
 main a:visited {color: #6A6873;}
-main ul {list-style-type: "circle;}
+main ul {list-style-type: "circle";}
 main li {padding-left: 8px;}
 
 .navi {
