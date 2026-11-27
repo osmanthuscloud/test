@@ -1,1 +1,82 @@
-<button class="main-button" onclick="generateStory()">randomize!</button>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drabble Prompt</title>
+    <link href="/art/style2026.css" rel="stylesheet" type="text/css" media="all">
+      
+      <style>
+          #story {padding: 0 20px; border: 2px dashed #D0D0DB; margin: 1em auto;}
+          #story ul {padding-left:20px;}
+          #story li {padding-block: 4px;}
+          button {
+              all:unset;
+              font-weight: bold;
+              cursor: pointer;
+          }
+          button:focus {
+              outline: 2px solid #fff;
+              outline-offset: -4px;
+          }
+          .main-button {
+              background: #D0D0DB;
+              padding: .5em 16px;
+              border: 2px solid #4D4B57;
+              border-radius: 8px;
+              user-select: none;
+          }
+          .main-button:hover {
+              background: #e4e4ed;
+              border: 2px solid #878592;
+          }
+          
+          #desc button,
+          #person button,
+          #eyes button,
+          #hair button,
+          #food button,
+          #thing button {
+              background: #e4e4ed;
+              padding-inline: 4px;
+              margin-block: 4px;
+          }
+          
+          #desc button:hover,
+          #person button:hover,
+          #eyes button:hover,
+          #hair button:hover,
+          #food button:hover,
+          #thing button:hover {
+              background: #fff09c;
+          }
+          
+          #desc button {background: #FF9EAB80;}
+          #person button {background: #ffbc9380;}
+          #hair button {background: #b2ffac80;}
+          #eyes button {background: #9EE6FF80;}
+          #food button {background: #bdb7ff80;}
+          #thing button {background: #ffbef080;}
+
+      </style>
+  </head>
+  <body>
+      
+    <main>
+                
+        <h1>Drabble Prompt Generator</h1>
+        <p>testing one two three</p>
+        
+        <button class="main-button" onclick="generateStory()">randomize!</button>
+        <div id="story">
+            <p><span id="desc"></span> <span id="person"></span><span id="hair"></span><span id="eyes"></span></p>
+    
+        </div>
+        
+        <script type="text/javascript" src="random-oc.js"></script><noscript>this page requires javascript</noscript>
+        
+      
+        </main>
+  </body>
+</html>
