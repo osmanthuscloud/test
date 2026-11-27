@@ -26,9 +26,10 @@ body {
   background-color: #D0D0DB;
   background-image: url(/posts/images/bg.png);
   background-attachment: fixed;
-    display: flex;
+  display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
+  height: 100vh; 
 }
 ::selection {
   background: #0a0a0a;
