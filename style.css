@@ -26,6 +26,12 @@ body {
   background-color: #D0D0DB;
   background-image: url(/posts/images/bg.png);
   background-attachment: fixed;
+    display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Optional: Make parent take up full viewport height */
+  /* OR */
+  min-height: 100px; /* Optional: Set a minimum height for the parent */
 }
 ::selection {
   background: #0a0a0a;
@@ -83,6 +89,7 @@ main {
   position: relative;
   z-index: 1;
   background-color: white;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 1.5em 42px;
