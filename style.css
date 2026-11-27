@@ -29,9 +29,6 @@ body {
     display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
-  height: 100vh; /* Optional: Make parent take up full viewport height */
-  /* OR */
-  min-height: 100px; /* Optional: Set a minimum height for the parent */
 }
 ::selection {
   background: #0a0a0a;
