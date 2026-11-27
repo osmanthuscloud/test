@@ -57,25 +57,11 @@ function newEyes(){
     document.getElementById("eyes").innerHTML = `
     and <button onclick="newEyes()">${eyetype}</button> eyes.`;   
 }
-function newFood(){
-    let favefood = foods[getRandomInt(0, foods.length)];
-    
-    document.getElementById("food").innerHTML = `
-    favorite food: <button onclick="newFood()">${favefood}</button>`; 
-}
-function newThing(){
-    let favething = faves[getRandomInt(0, faves.length)];
-    
-    document.getElementById("thing").innerHTML = `
-    favorite thing: <button onclick="newThing()">${favething}</button>`;   
-}
+
 
 function generateStory(){
     newDesc();
     newPerson();
     newHair();
     newEyes();
-    newFood();
-    newThing();
 }
-
