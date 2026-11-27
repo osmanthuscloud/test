@@ -134,16 +134,8 @@ main li {padding-left: 8px;}
   margin: 0; padding: 16px 12px;
   margin-right: 10px;
 }
-.gallery details[open] > summary {display:none;}
 
-footer {
-  font-size: small;
-  text-align: center;
-  padding: 10px;
-}
-footer a,
-footer a:hover,
-footer a:visited {color: #4D4B57;}
+
 
 @media only screen and (max-width: 800px) {
 
