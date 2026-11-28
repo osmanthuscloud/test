@@ -64,6 +64,7 @@ const golden_core = [
   "Coming Untouched", "Anal Plugs", "Fantasies", "Fingerfucking",
   "Asphyxiation", "Fuck or Die", "Breeding", "Gender Bender",
   "Crossdressing", "Ribbons/Chains", "Tentacles", "Sex Pollen", "Watersports/Omorashi",
+  "Mpreg",
 ];
 
 const allLists = {
