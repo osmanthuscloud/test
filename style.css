@@ -4,7 +4,174 @@
   font-family: 'Nunito';
   font-style: normal;
   src: url('/fonts/nunito-v31-latin-600.woff2') format('woff2'),
-       url('/fonts/nunito-v31-latin-600.ttf') format('truetype');
+       url('/fonts/nunito-v31-latin-600.ttf') format('tru/* Retro Christmas Palette Variables */
+:root {
+  --bg-cream: #f7f1e3;       /* Vintage parchment cream */
+  --card-warm: #fffdf7;      /* Soft ivory card */
+  --pine-green: #2c5e4f;     /* Retro evergreen */
+  --pine-dark: #1e4237;
+  --cranberry-red: #b83a2d;  /* Vintage holly berry red */
+  --retro-plum: #6d466b;     /* Dusty retro purple */
+  --gold-accent: #d49a35;    /* Antique tinsel gold */
+  --ink-brown: #2b211e;      /* Warm sepia charcoal */
+  --muted-taupe: #6e5d56;
+  --border-tan: #dfd3be;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--bg-cream);
+  /* Subtle retro candy-stripe top border */
+  border-top: 8px solid var(--cranberry-red);
+  color: var(--ink-brown);
+  padding: 32px 24px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.9rem;
+  color: var(--pine-green);
+  text-shadow: 1px 1px 0px rgba(212, 154, 53, 0.35);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted-taupe);
+}
+
+/* Button Row Layout */
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Base Toggle Button Style */
+.toggle-btn {
+  font-family: inherit;
+  padding: 10px 20px;
+  border: 2px solid var(--border-tan);
+  border-radius: 999px;
+  background-color: var(--card-warm);
+  color: var(--ink-brown);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--border-tan);
+  transition: all 0.15s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background-color: #f0e6d2;
+  border-color: var(--gold-accent);
+}
+
+/* Active State: Feeling Festive (Retro Pine Green) */
+.toggle-btn[data-category="winter"][aria-pressed="true"] {
+  background-color: var(--pine-green);
+  border-color: var(--pine-dark);
+  color: #fffdf7;
+  box-shadow: 0 2px 0 var(--pine-dark);
+}
+
+/* Active State: Feeling Spicy (Retro Plum & Gold) */
+.toggle-btn[data-category="spicy"][aria-pressed="true"] {
+  background-color: var(--retro-plum);
+  border-color: #4e304d;
+  color: #fffdf7;
+  box-shadow: 0 2px 0 #4e304d;
+}
+
+/* Main Generate Button (Cranberry Red + Gold Trim) */
+.mortal {
+  font-family: inherit;
+  padding: 12px 26px;
+  border: 2px solid var(--gold-accent);
+  border-radius: 12px;
+  background-color: var(--cranberry-red);
+  color: #fffdf7;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #8a271d;
+  margin-bottom: 24px;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.mortal:hover {
+  background-color: #a13125;
+}
+
+.mortal:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #8a271d;
+}
+
+/* Result Container Cards */
+.lines {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.idle {
+  font-style: italic;
+  color: var(--muted-taupe);
+}
+
+.result-box {
+  padding: 14px 20px;
+  border-radius: 12px;
+  background-color: var(--card-warm);
+  border: 2px solid var(--border-tan);
+  border-left: 6px solid var(--gold-accent);
+  box-shadow: 0 3px 8px rgba(43, 33, 30, 0.06);
+  max-width: 440px;
+}
+
+/* Color-coded left accents per category */
+#winter-box {
+  border-left-color: var(--pine-green);
+}
+
+#spicy-box {
+  border-left-color: var(--retro-plum);
+}
+
+.result-label {
+  display: block;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cranberry-red);
+  margin-bottom: 4px;
+}
+
+/* Randomized Text Display */
+.result {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-brown);
+}
+
+.hidden {
+  display: none;
+}
+etype');
 }
 /* nunito-900 - latin */
 @font-face {
