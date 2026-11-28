@@ -1,327 +1,392 @@
-/* Retro Christmas Palette Variables */
 :root {
-  --bg-cream: #f7f1e3;       /* Vintage parchment cream */
-  --card-warm: #fffdf7;      /* Soft ivory card */
-  --pine-green: #2c5e4f;     /* Retro evergreen */
-  --pine-dark: #1e4237;
-  --cranberry-red: #b83a2d;  /* Vintage holly berry red */
-  --retro-plum: #6d466b;     /* Dusty retro purple */
-  --gold-accent: #d49a35;    /* Antique tinsel gold */
-  --ink-brown: #2b211e;      /* Warm sepia charcoal */
-  --muted-taupe: #6e5d56;
-  --border-tan: #dfd3be;
+  --paper-white: #ffffff;
+  --polaroid-cream: #faf8f3;
+  --polaroid-border: #e6e1d6;
+  --ink-charcoal: #1c1b1a;
+  --ink-muted: #6b665f;
+
+  /* Subtle Retro Christmas Ink Accents */
+  --holly-red: #9e2a2b;
+  --pine-green: #2c5e4f;
+  --plum-ink: #6d466b;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  background-color: var(--bg-cream);
-  /* Subtle retro candy-stripe top border */
-  border-top: 8px solid var(--cranberry-red);
-  color: var(--ink-brown);
-  padding: 32px 24px;
-  max-width: 650px;
-  margin: 0 auto;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  background-color: var(--paper-white);
+  color: var(--ink-charcoal);
+  margin: 0;
+  padding: 48px 24px 36px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.scrapbook-page {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top Editorial Header */
+.scrapbook-header {
+  max-width: 480px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+
+.stamp-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--holly-red);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
 }
 
 .title {
-  font-size: 1.9rem;
-  color: var(--pine-green);
-  text-shadow: 1px 1px 0px rgba(212, 154, 53, 0.35);
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  color: var(--ink-charcoal);
 }
 
-.label {
-  display: block;
-  margin-bottom: 12px;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--muted-taupe);
+.subtitle {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--ink-muted);
+  margin: 0;
 }
 
-/* Button Row Layout */
-.button-group {
+/* Two-Column Scrapbook Spread */
+.scrapbook-spread {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 44px;
+  align-items: start;
+}
+
+@media (max-width: 660px) {
+  .scrapbook-spread {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Left Column: Underlined List Items + Ink Circles */
+.dreepy {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 12px;
 }
 
-/* Base Toggle Button Style */
+@media (max-width: 660px) {
+  .dreepy {
+    align-items: flex-start;
+  }
+}
+
+.checklist-group {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
 .toggle-btn {
   font-family: inherit;
-  padding: 10px 20px;
-  border: 2px solid var(--border-tan);
-  border-radius: 999px;
-  background-color: var(--card-warm);
-  color: var(--ink-brown);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-charcoal);
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
   cursor: pointer;
-  box-shadow: 0 2px 0 var(--border-tan);
-  transition: all 0.15s ease-in-out;
 }
 
-.toggle-btn:hover {
-  background-color: #f0e6d2;
-  border-color: var(--gold-accent);
+.underline-label {
+  border-bottom: 1.5px solid var(--ink-charcoal);
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-/* Active State: Feeling Festive (Retro Pine Green) */
-.toggle-btn[data-category="winter"][aria-pressed="true"] {
+.toggle-btn:hover .underline-label {
+  color: var(--holly-red);
+  border-bottom-color: var(--holly-red);
+}
+
+/* Solid / Hollow Ink Dot Indicator */
+.ink-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink-charcoal);
+  background-color: transparent;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+/* Filled Ink Dot when Toggled ON */
+.toggle-btn[aria-pressed="true"] .ink-dot {
+  background-color: var(--ink-charcoal);
+  transform: scale(1.05);
+}
+
+.toggle-btn[data-category="winter"][aria-pressed="true"] .ink-dot {
   background-color: var(--pine-green);
-  border-color: var(--pine-dark);
-  color: #fffdf7;
-  box-shadow: 0 2px 0 var(--pine-dark);
+  border-color: var(--pine-green);
 }
 
-/* Active State: Feeling Spicy (Retro Plum & Gold) */
-.toggle-btn[data-category="spicy"][aria-pressed="true"] {
-  background-color: var(--retro-plum);
-  border-color: #4e304d;
-  color: #fffdf7;
-  box-shadow: 0 2px 0 #4e304d;
+.toggle-btn[data-category="winter"][aria-pressed="true"] .underline-label {
+  color: var(--pine-green);
+  border-bottom-color: var(--pine-green);
 }
 
-/* Main Generate Button (Cranberry Red + Gold Trim) */
+.toggle-btn[data-category="spicy"][aria-pressed="true"] .ink-dot {
+  background-color: var(--plum-ink);
+  border-color: var(--plum-ink);
+}
+
+.toggle-btn[data-category="spicy"][aria-pressed="true"] .underline-label {
+  color: var(--plum-ink);
+  border-bottom-color: var(--plum-ink);
+}
+
+/* Minimalist Typewriter Action Button */
 .mortal {
   font-family: inherit;
-  padding: 12px 26px;
-  border: 2px solid var(--gold-accent);
-  border-radius: 12px;
-  background-color: var(--cranberry-red);
-  color: #fffdf7;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  color: var(--holly-red);
+  background-color: var(--polaroid-cream);
+  border: 1.5px solid var(--ink-charcoal);
+  padding: 10px 18px;
   cursor: pointer;
-  box-shadow: 0 3px 0 #8a271d;
-  margin-bottom: 24px;
-  transition: transform 0.1s ease, background-color 0.15s ease;
+  box-shadow: 3px 3px 0 var(--ink-charcoal);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .mortal:hover {
-  background-color: #a13125;
+  background-color: #f4efe4;
 }
 
 .mortal:active {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 #8a271d;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink-charcoal);
 }
 
-/* Result Container Cards */
+/* Right Column: Polaroid Frame Card */
+.polaroid-card {
+  position: relative;
+  background-color: var(--polaroid-cream);
+  border: 1px solid var(--polaroid-border);
+  padding: 24px 20px 44px;
+  box-shadow: 0 8px 22px rgba(28, 27, 26, 0.08);
+  transform: rotate(1.2deg);
+  transition: transform 0.2s ease;
+}
+
+.polaroid-card:hover {
+  transform: rotate(0deg);
+}
+
+.binder-clip {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  font-size: 1.25rem;
+  transform: rotate(18deg);
+  user-select: none;
+}
+
+.polaroid-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Prompt Lines Inside the Polaroid */
 .lines {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .idle {
-  font-style: italic;
-  color: var(--muted-taupe);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  padding: 16px 4px;
 }
 
 .result-box {
-  padding: 14px 20px;
-  border-radius: 12px;
-  background-color: var(--card-warm);
-  border: 2px solid var(--border-tan);
-  border-left: 6px solid var(--gold-accent);
-  box-shadow: 0 3px 8px rgba(43, 33, 30, 0.06);
-  max-width: 440px;
+  border-bottom: 1px dashed var(--polaroid-border);
+  padding-bottom: 12px;
 }
 
-/* Color-coded left accents per category */
-#winter-box {
-  border-left-color: var(--pine-green);
+.result-box:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-#spicy-box {
-  border-left-color: var(--retro-plum);
-}
-
-.result-label {
-  display: block;
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cranberry-red);
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 4px;
 }
 
-/* Randomized Text Display */
+.result-label {
+  font-size: 0.72rem;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
+  color: var(--holly-red);
+}
+
+#winter-box .result-label {
+  color: var(--pine-green);
+}
+
+#spicy-box .result-label {
+  color: var(--plum-ink);
+}
+
+/* Subtle Underlined Reroll Link */
+.reroll-btn {
+  font-family: inherit;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--ink-muted);
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  padding: 0 0 1px;
+  cursor: pointer;
+}
+
+.reroll-btn:hover {
+  color: var(--holly-red);
+  border-bottom-color: var(--holly-red);
+}
+
 .result {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 0.98rem;
   font-weight: 700;
-  color: var(--ink-brown);
+  line-height: 1.5;
+  color: var(--ink-charcoal);
+}
+
+/* Centered Page Number at Bottom */
+.page-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 56px;
+  color: var(--ink-charcoal);
 }
 
 .hidden {
   display: none;
 }
-etype');
-}
-/* nunito-900 - latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/nunito-v31-latin-900.woff2') format('woff2'),
-       url('/fonts/nunito-v31-latin-900.ttf') format('truetype');
+
+.music-box-widget {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--polaroid-border);
 }
 
-html {scroll-behavior: smooth;}
-* {box-sizing: border-box;}
-details > summary {cursor:pointer;}
-
-body {
-  font-family: Nunito;
-  margin: 0;
-  color: #4D4B57;
-  background-color: #D0D0DB;
-  background-image: url(/posts/images/bg.png);
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100vh; 
-}
-::selection {
-  background: #0a0a0a;
-  color: white;
-}
-
-h1, h2, h3 {color:#4D4B57;}
-h1, h2 {line-height: 1.5em;}
-h1, h2 {background-color: #D0D0DB; padding: .4em 20px;}
-h3 {border-bottom: 2px dashed #bdbdcd; padding: .4em 0;}
-
-a {color: #5A67D3;}
-a:hover {
-  color: #FF85CE;
-  text-decoration: none;
-}
-
-nav {margin: auto;}
-nav ul {
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 8px;
-  font-weight: bold;
-}
-nav li {
-  padding: 4px 20px;
-  list-style-type: "";
-  background: #eee;
-  border-radius: 8px 8px 0 0;
-}
-nav li a {
-  text-decoration: none;
-}
-nav li a:visited {
-  color: #5A67D3;
-}
-
-summary {
-  border: 1px dashed;
-  padding: 6px;
-  margin: 4px 0;
-  font-size: 15px;
-  font-weight: bold;
-}
-details[open] > summary {border: 1px dashed;}
-
-img {max-width: 90%;}
-
-main {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1.5em 42px;
-  border-radius: 20px;
-  line-height: 1.5rem;
-  box-shadow: 0 0 18px #6A687380;
-}
-main hr {
+.music-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  background: transparent;
   border: none;
-  border-bottom: 2px dashed #bdbdcd;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
 
-main h3 {
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
-}
-main a:visited {color: #6A6873;}
-main ul {list-style-type: circle;}
-main li {padding-left: 8px;}
-
-.navi {
-  display:flex;
-  flex-wrap: wrap;
-}
-.navi li {
-  margin-right: 30px;}
-
-.gallery {
-  display:flex;
-  flex-wrap: wrap;
-}
-.gallery details > summary,
-.gallery img {
-  border: 2px solid #6A6873;
-}
-.gallery img {
-  width: 96px;
-}
-.gallery details > summary:hover,
-.gallery img:hover{
-  border: 2px solid #FF85CE;
+.music-btn:hover {
+  color: var(--holly-red);
 }
 
-.gallery details > summary {
-  background: #D0D0DB;
-  list-style-type: "";
-  font-size: small;
-  font-weight: bold;
-  width: 86px;
-  height: 86px;
-  margin: 0; padding: 16px 12px;
-  margin-right: 10px;
+.music-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink-charcoal);
+  font-size: 0.8rem;
+  color: var(--ink-charcoal);
+  transition: all 0.2s ease;
 }
-.gallery details[open] > summary {display:none;}
 
-footer {
-  font-size: small;
-  text-align: center;
-  padding: 10px;
+/* Active playing state */
+.music-btn[aria-pressed="true"] .music-icon {
+  background-color: var(--pine-green);
+  border-color: var(--pine-green);
+  color: #ffffff;
+  animation: spinSlow 6s linear infinite;
 }
-footer a,
-footer a:hover,
-footer a:visited {color: #4D4B57;}
 
-@media only screen and (max-width: 800px) {
+.music-btn[aria-pressed="true"] .music-label {
+  color: var(--pine-green);
+  font-weight: 700;
+}
 
-  main {
-    border-radius: 0;
-    padding: 1rem 20px;
-  }
-  .gallery img {width: 90px;}
-  .gallery details > summary {width: 90px;}
-  
-  nav ul {margin-bottom: 10px; justify-content: center;}
-  nav li {border-radius: 0;}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.melody-switcher {
+  margin-top: 8px;
+  padding-left: 34px;
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.melody-cycle-btn {
+  font-family: inherit;
+  font-size: 0.76rem;
+  color: var(--ink-charcoal);
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed var(--ink-muted);
+  padding: 0 0 1px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.melody-cycle-btn:hover {
+  color: var(--holly-red);
+  border-bottom-color: var(--holly-red);
 }
