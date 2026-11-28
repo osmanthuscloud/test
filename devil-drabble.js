@@ -23,7 +23,8 @@ const qi_refining = [
   "Entertainment (actors, models, etc)", "Office", "Found Family",
   "Aliens", "Ghost/Spirits", "Fairy Tale", "Royalty", "Canon",
   "Canon-Divergent", "Road Trip", "Domestic", "Coffee Shop",
-  "Flower Shop", "School (high school, university, etc)", "Reincarnation"
+  "Flower Shop", "School (high school, university, etc)", "Reincarnation",
+  "Streamers/Content Creator",
 ];
 
 const core_formation = [
@@ -33,9 +34,12 @@ const core_formation = [
   "Snow-kissed Cheeks and Nose", "Crackling Fireplace",
   "Marshmallows and Hot Chocolate", "Winter Solstice",
   "Vacation and Traveling", "Decorating Around the House", "Presents",
-  "Christmas Tree", "Christmas Cookies", "Gingerbread Houses",
+  "Christmas Tree", "Baking Cookies", "Gingerbread Houses",
   "Silent Night", "Jingle Bells", "Winter Olympics",
   "Starry Winter Night", "Footprints in the Snow", "Long, Dark Evenings"
+  "Snowball Fight", "Meeting the Family", "Family Reunion",
+  "The Grinch", "The Ghost of Christmas Past", "O Holy Night",
+  "Hibernation",
 ];
 
 const golden_core = [
@@ -43,29 +47,23 @@ const golden_core = [
   "Comeplay", "Simultaneous orgasm", "Orgasm Delay/Denial",
   "Handcuffs/ Restraints", "Rope Bondage", "Exhibitionism",
   "Deepthroating", "Multiple Orgasms", "Blindfolds",
-  "Hand fetishization (big strong hands; steady hands; rough knuckles; calluses; fists clenching in sheets)",
-  "Neck fetishization (nape of the neck, throat, hickeys, etc)",
-  "Nipple play",
-  "Noise (screaming or yelling during sex; whimpering or sobbing; purring, growling; slurping or moaning enthusiastically during blow-jobs)",
+  "Hand Fetishization", "Neck Fetishization", "Nipple play",
+  "Noise (emphasis on sounds, such as noises during a blowjob or skin against skin)",
   "Cockrings", "Dildos", "Vibrators", "Spanking",
-  "Taste as an erotic element", "Wet dreams or erotic dreams", "Praise",
-  "Striking with implements (whips, belts, riding crops, canes, paddles, etc)",
-  "Undressing (undressing in front of someone for the first time; one character undressing another; fumbling clumsily to get undressed, striptease)",
-  "Waxplay", "Verbal Domination",
-  "Toys and devices (feathers, ice cubes, hot wax, etc)",
-  "Well-fucked (being fucked out; fuck-dazed; sated and sleepy; wrecked; softened and debauched)",
-  "Verbal seduction; sweet talking; reciting poetry; talking someone to orgasm",
-  "Slow and/or prolonged sex",
-  "Sex outdoors/outside (in a field; in a rainstorm; with snow falling; on the beach; in a graveyard; in an alley)",
-  "Gags (ball-gags, scarves, mouth bits, etc)", "Rough sex",
-  "Oral fixation or fetishization (lips, tongue, or whole mouth; french-kissing; licking; oral displays using food or beer bottles; smoking cigarettes, cigars, or pipes; biting or chewing one's lip(s))",
-  "Masturbating for your partner",
-  "Masturbation (solitary or as performance)",
-  "Messiness and markers of arousal (mussed hair; flushed cheeks; swollen mouth; displaying bite marks or hickeys; clothes in disarray; sprawling; come-spattered skin)",
-  "Delayed gratification", "Come-marking", "Coming quickly",
-  "Coming without being touched",
-  "Anal/butt plugs (during sex; worn under clothes in public)",
-  "Fantasies", "Fingerfucking"
+  "Taste as an Erotic Element", "Wet Dreams", "Praise",
+  "Striking with Implements (such as whip, riding crop, paddle, etc)",
+  "Undressing (such as being shy to undress, striptease, etc)",
+  "Waxplay", "Verbal Domination", "Toys & Devices (wax play, feathers, etc)",
+  "Well-Fucked (fuck-dazed; sated and sleepy; wrecked; softened and debauched)",
+  "Verbal Seduction (sweet-talk, dirty-talk, etc)",
+  "Slow and/or Prolonged Sex", "Public Sex/Outdoors Sex",
+  "Gags", "Rough sex", "Oral Fixation or Fetishization",
+  "Exhibitionist Masturbation", "Masturbation",
+  "Messiness and Markers of Arousal (emphasis on like messy hair, swollen lips, hickeys, etc)",
+  "Delayed Gratification", "Come-Marking", "Coming Quickly",
+  "Coming Untouched", "Anal Plugs", "Fantasies", "Fingerfucking",
+  "Asphyxiation", "Fuck or Die", "Breeding", "Gender Bender",
+  "Crossdressing", "Ribbons/Chains", "Tentacles", "Sex Pollen", "Watersports/Omorashi",
 ];
 
 const allLists = {
