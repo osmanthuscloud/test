@@ -1,62 +1,52 @@
+<main class="seal">
+  <header class="babu">
+    <h1 class="title">welcome to shixun's cultivation cavern ♡</h1>
+  </header>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drabble Prompt</title>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
-      
-      <style>
-          #story {padding: 0 20px; border: 2px dashed #D0D0DB; margin: 1em auto;}
-          #story ul {padding-left:20px;}
-          #story li {padding-block: 4px;}
-          button {
-              all:unset;
-              font-weight: bold;
-              cursor: pointer;
-          }
-          button:focus {
-              outline: 2px solid #fff;
-              outline-offset: -4px;
-          }
-          .main-button {
-              background: #D0D0DB;
-              padding: .5em 16px;
-              border: 2px solid #4D4B57;
-              border-radius: 8px;
-              user-select: none;
-          }
-          .main-button:hover {
-              background: #e4e4ed;
-              border: 2px solid #878592;
-          }
+  <section class="dreepy" aria-label="draw settings">
+    <div class="row">
+      <span class="label">to ascend, one must gain more merits</span>
+      <div class="button-group" id="chips" role="group" aria-label="more merits please">
+        <button type="button" class="toggle-btn" data-category="winter" aria-pressed="false">feeling festive</button>
+        <button type="button" class="toggle-btn" data-category="spicy" aria-pressed="false">feeling spicy</button>
+      </div>
+    </div>
 
-          
+    <div class="sword-flight">
+      <button type="button" class="mortal" id="generate-btn">
+        <span class="mortal-text">today's drabble:</span>
+      </button>
+    </div>
+  </section>
 
-      </style>
-  </head>
-  <body>
-      
-    <main>
-                
-        <h1>on this holiday of cheer...</h1>
-        <p>testing one two three</p>
-        
-        <button class="main-button" onclick="generateStory()">today's devil's drabble</button>
-        <div id="story">
-            <p>
-              <ul>
-                <li>genre:<span id="setting"></span></li>
-                <li>au:<span id="trope"></span></li>
-              
-              </ul>
-            </p>
-        </div>
-        
+  <section class="stage" aria-label="drawn lines">
+    <article class="post" id="post">
+      <ol class="lines" id="lines" aria-live="polite">
+        <li class="idle" id="idle-msg">what will today's drabble be?</li>
+
+        <li id="genre-box" class="result-box hidden">
+          <span class="result-label">Genre</span>
+          <p class="result" id="genre"></p>
+        </li>
+
+        <li id="trope-box" class="result-box hidden">
+          <span class="result-label">AU / Trope</span>
+          <p class="result" id="trope"></p>
+        </li>
+
+        <li id="winter-box" class="result-box hidden">
+          <span class="result-label">Festive Tidbit</span>
+          <p class="result"></p>
+        </li>
+
+        <li id="spicy-box" class="result-box hidden">
+          <span class="result-label">Holiday Spice</span>
+          <p class="result"></p>
+        </li>
+      </ol>
+    </article>
+  </section>
         <script type="text/javascript" src="devil-drabble.js"></script><noscript>this page requires javascript</noscript>
-        
-      
-        </main>
+    </main>
   </body>
 </html>
