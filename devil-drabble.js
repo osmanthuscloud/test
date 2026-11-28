@@ -1,3 +1,7 @@
+function getRandomInt(min, max) {
+  	return Math.floor(Math.random() * (max - min)) + min;
+}
+
 const foundation = [
   "Angst", "Fluff", "Domestic", "Action", "Adventure",
   "Pining", "Slow Burn", "Mystery", "Fluff and Porn", "Sick Fic",
