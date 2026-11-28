@@ -9,14 +9,14 @@
   --plum-ink: #6d466b;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html { 
   scrollbar-color: #2c5e4f #ffffff;
   overflow-y: auto;
   scrollbar-width: thin;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -38,10 +38,12 @@ body {
   justify-content: space-between;
 }
 
-/* Top Editorial Header */
+/* -----
+the start of shixun's cultivation aka the header
+------- */
 .scrapbook-header {
   max-width: 480px;
-  margin: 0 auto 48px;
+  margin: 0 auto 1em;
   text-align: left;
 }
 
