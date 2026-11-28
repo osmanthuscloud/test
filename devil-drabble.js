@@ -74,7 +74,10 @@ const allLists = {
   spicy: golden_core
 };
 
-// Track remaining unshown prompts and last drawn prompt per category
+/*------ 
+flower petals (prompts) fall like snow...
+follow the trail, not one petal looks the same, from blossoms to bud
+--------*/
 const decks = {};
 const lastDrawn = {};
 
@@ -104,7 +107,9 @@ function drawFromDeck(category) {
   return nextItem;
 }
 
-// Toggle optional category buttons ON/OFF
+/*------------
+toggle for more karmic rewards and merits to be gained
+------------- */
 document.querySelectorAll(".toggle-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const category = btn.dataset.category;
@@ -127,7 +132,9 @@ document.querySelectorAll(".toggle-btn").forEach((btn) => {
   });
 });
 
-// Generate main drabble + reroll active optional categories
+/*--------
+city fills with wandering ghosts, the devil draws its drabble with a chance for redemption
+---------- */
 document.getElementById("generate-btn").addEventListener("click", () => {
   document.getElementById("idle-msg").classList.add("hidden");
 
@@ -147,7 +154,10 @@ document.getElementById("generate-btn").addEventListener("click", () => {
   });
 });
 
-// Reroll an individual card without changing the others
+
+/* -------- 
+THIS IS FOR REROLLING INDEPENDENTLY 
+---------- */
 document.querySelectorAll(".reroll-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const category = btn.dataset.reroll;
@@ -164,7 +174,7 @@ document.querySelectorAll(".reroll-btn").forEach((btn) => {
 
 /* winding the music box and releasing the wind chimes, snowflakes fluttering by the window -------- */
 
-// --- Synthesized Guqin Music Box: TGCF Themes ---
+// heaven official's blessing theme songs
 let audioCtx = null;
 let isPlaying = false;
 let melodyTimer = null;
