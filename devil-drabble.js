@@ -36,7 +36,7 @@ const core_formation = [
   "Vacation and Traveling", "Decorating Around the House", "Presents",
   "Christmas Tree", "Baking Cookies", "Gingerbread Houses",
   "Silent Night", "Jingle Bells", "Winter Olympics",
-  "Starry Winter Night", "Footprints in the Snow", "Long, Dark Evenings"
+  "Starry Winter Night", "Footprints in the Snow", "Long, Dark Evenings",
   "Snowball Fight", "Meeting the Family", "Family Reunion",
   "The Grinch", "The Ghost of Christmas Past", "O Holy Night",
   "Hibernation",
