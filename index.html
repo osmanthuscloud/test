@@ -1,59 +1,102 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Devil's Drabbles for December</title>
-</head>
-<body>
+<!-- Optional Google Font for authentic typewriter look -->
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-<main class="seal">
-  <header class="babu">
-    <h1 class="title">welcome to shixun's cultivation cavern ♡</h1>
+<main class="scrapbook-page">
+  <!-- Editorial Top Header -->
+  <header class="scrapbook-header">
+    <span class="stamp-tag" aria-hidden="true">❄ no. 25</span>
+    <h1 class="title">welcome to shixun's cultivation cavern</h1>
+    <p class="subtitle">to ascend, one must gain more merits — select your seasonal tidbits to earn karmic rewards.</p>
   </header>
 
-  <section class="dreepy" aria-label="draw settings">
-    <div class="row">
-      <span class="label">to ascend, one must gain more merits</span>
-      <div class="button-group" id="chips" role="group" aria-label="more merits please">
-        <button type="button" class="toggle-btn" data-category="winter" aria-pressed="false">feeling festive</button>
-        <button type="button" class="toggle-btn" data-category="spicy" aria-pressed="false">feeling spicy</button>
+  <!-- Main Two-Column Scrapbook Spread -->
+  <div class="scrapbook-spread">
+    <!-- Left Column: Checklist Toggles & Draw Action -->
+    <section class="dreepy" aria-label="draw settings">
+      <div class="checklist-group" id="chips" role="group" aria-label="more merits please">
+        <button type="button" class="toggle-btn" data-category="winter" aria-pressed="false">
+          <span class="underline-label">feeling festive</span>
+          <span class="ink-dot" aria-hidden="true"></span>
+        </button>
+
+        <button type="button" class="toggle-btn" data-category="spicy" aria-pressed="false">
+          <span class="underline-label">feeling spicy</span>
+          <span class="ink-dot" aria-hidden="true"></span>
+        </button>
       </div>
-    </div>
 
-    <div class="sword-flight">
-      <button type="button" class="mortal" id="generate-btn">
-        <span class="mortal-text">today's drabble:</span>
-      </button>
-    </div>
-  </section>
+      <div class="sword-flight">
+        <button type="button" class="mortal" id="generate-btn">
+          <span class="mortal-text">today's drabble →</span>
+        </button>
+      </div>
+<div class="music-box-widget">
+  <button type="button" class="music-btn" id="music-toggle" aria-pressed="false">
+    <span class="music-icon" id="music-icon">♪</span>
+    <span class="music-label" id="music-label">heaven's guqin box</span>
+  </button>
 
-  <section class="stage" aria-label="drawn lines">
-    <article class="post" id="post">
-      <ol class="lines" id="lines" aria-live="polite">
-        <li class="idle" id="idle-msg">what will today's drabble be?</li>
+  <div class="melody-switcher">
+    <span class="melody-prefix">tune:</span>
+    <button type="button" class="melody-cycle-btn" id="melody-cycle" title="Switch TGCF theme">
+      no separation ↻
+    </button>
+  </div>
+</div>
 
-        <li id="genre-box" class="result-box hidden">
-          <span class="result-label">Genre</span>
-          <p class="result" id="genre"></p>
-        </li>
+      
+      
+    </section>
 
-        <li id="trope-box" class="result-box hidden">
-          <span class="result-label">AU / Trope</span>
-          <p class="result" id="trope"></p>
-        </li>
+    <!-- Right Column: Pinned Polaroid-Style Prompt Card -->
+    <section class="stage" aria-label="drawn lines">
+      <article class="polaroid-card" id="post">
+        <!-- Decorative Binder Clip Accent -->
+        <div class="binder-clip" aria-hidden="true">📎</div>
 
-        <li id="winter-box" class="result-box hidden">
-          <span class="result-label">Festive Tidbit</span>
-          <p class="result"></p>
-        </li>
+        <ol class="lines" id="lines" aria-live="polite">
+          <li class="idle" id="idle-msg">what will today's drabble be?</li>
 
-        <li id="spicy-box" class="result-box hidden">
-          <span class="result-label">Holiday Spice</span>
-          <p class="result"></p>
-        </li>
-      </ol>
-    </article>
-  </section>
-        <script type="text/javascript" src="devil-drabble.js"></script><noscript>this page requires javascript</noscript>
+          <li id="genre-box" class="result-box hidden">
+            <div class="result-header">
+              <span class="result-label">genre</span>
+              <button type="button" class="reroll-btn" data-reroll="genre" aria-label="Reroll Genre">reroll</button>
+            </div>
+            <p class="result" id="genre"></p>
+          </li>
+
+          <li id="trope-box" class="result-box hidden">
+            <div class="result-header">
+              <span class="result-label">au / trope</span>
+              <button type="button" class="reroll-btn" data-reroll="trope" aria-label="Reroll AU or Trope">reroll</button>
+            </div>
+            <p class="result" id="trope"></p>
+          </li>
+
+          <li id="winter-box" class="result-box hidden">
+            <div class="result-header">
+              <span class="result-label">festive tidbit</span>
+              <button type="button" class="reroll-btn" data-reroll="winter" aria-label="Reroll Festive Tidbit">reroll</button>
+            </div>
+            <p class="result"></p>
+          </li>
+
+          <li id="spicy-box" class="result-box hidden">
+            <div class="result-header">
+              <span class="result-label">holiday spice</span>
+              <button type="button" class="reroll-btn" data-reroll="spicy" aria-label="Reroll Holiday Spice">reroll</button>
+            </div>
+            <p class="result"></p>
+          </li>
+        </ol>
+
+        <div class="polaroid-caption" aria-hidden="true">merry holidays</div>
+      </article>
+    </section>
+  </div>
+
+  <!-- Minimalist Centered Page Number Footer -->
+  <footer class="page-footer" aria-hidden="true">25</footer>
 </main>
-</body>
-</html>
